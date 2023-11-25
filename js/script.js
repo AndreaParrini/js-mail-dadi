@@ -73,6 +73,43 @@ document.getElementById('registration').addEventListener('click', function(){
 
 })
 
+document.getElementById('adduser').addEventListener('click', function(){
+
+    const newUserMail = document.getElementById('newusermail').value;
+    console.log(newUserMail);
+
+    let controlAccess = false;
+
+    for (let i = 0; i < mailRegistered.length; i++) {
+
+        const element = mailRegistered[i];
+        console.log(element);
+
+        if (element === newUserMail) {
+
+            controlAccess = true;
+
+        }
+
+    }
+
+    if (controlAccess === true) {
+
+        alert('Mail già usata per un altro account')
+
+    } else {
+       
+        mailRegistered.push(newUserMail);
+        document.getElementById('sectionLogin').classList.remove('d-none');
+        document.getElementById('sectionRegistration').classList.add('d-none');
+        document.getElementById('usermail').value = "";
+
+    }
+
+    console.log(mailRegistered);
+
+})
+
 document.getElementById('play').addEventListener('click', function () {
 
     const userNumber = Math.round(Math.random() * 5) + 1;
