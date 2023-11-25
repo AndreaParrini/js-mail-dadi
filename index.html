@@ -13,14 +13,31 @@
 <body>
 
     <div class="container">
+
         <div id="sectionLogin" class="my-3 text-center">
             <div for="exampleFormControlInput1" class="form-label text-center text-uppercase">Insert you email adress</div>
             <input type="email" class="form-control" id="usermail" placeholder="name@example.com">
             <button type="button" id="login" class="btn btn-secondary mt-3">Login</button>
             <button type="button" id="annulla" class="btn btn-secondary mt-3">Annulla</button>
         </div>
-        <div id="sectionPlay" class="card text-center bg-warning d-none">
-            <h2 class="text-uppercase my-4">Benvenuto <span id="nameUser"></span> nel gioco dei dadi</h2>
+
+        <div id="sectionErrorMail" class="my-3 text-center bg-info p-4 d-none">
+
+            <h5 class="text-uppercase">Utente non registrato</h5>
+            <p>La mail <span id="nameUser" class="nameUser text-danger"></span> è errata, controlla di aver scritto bene e riprova, altrimenti registrati.</p>
+            <button type="button" id="tryagain" class="btn btn-secondary">Riprova</button>
+            <button type="button" id="registration" class="btn btn-secondary">Registrati</button>
+        </div>
+
+        <div id="sectionRegistration" class="my-3 text-center d-none">
+            <div for="exampleFormControlInput1" class="form-label text-center text-uppercase">Insert you email adress to registrate on site</div>
+            <input type="email" class="form-control" id="newusermail" placeholder="name@example.com">
+            <button type="button" id="adduser" class="btn btn-secondary mt-3">Registrati</button>
+            <button type="button" id="annullaregistrazione" class="btn btn-secondary mt-3">Annulla Registrazione</button>
+        </div>
+
+        <div id="sectionPlay" class="my-3 card text-center bg-warning d-none">
+            <h2 class="text-uppercase my-4">Benvenuto <span id="user"></span> nel gioco dei dadi</h2>
             <p class="mx-5">
                 Per giocare basterà cliccare sul tasto gioca, verranno generati due numeri random, il più altro vince.
             </p>
