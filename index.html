@@ -13,11 +13,28 @@
 <body>
 
     <div class="container">
-        <div class="my-3 text-center">
+        <div id="sectionLogin" class="my-3 text-center">
             <div for="exampleFormControlInput1" class="form-label text-center text-uppercase">Insert you email adress</div>
             <input type="email" class="form-control" id="usermail" placeholder="name@example.com">
             <button type="button" id="login" class="btn btn-secondary mt-3">Login</button>
             <button type="button" id="annulla" class="btn btn-secondary mt-3">Annulla</button>
+        </div>
+        <div id="sectionPlay" class="card text-center bg-warning d-none">
+            <h2 class="text-uppercase my-4">Benvenuto <span id="nameUser"></span> nel gioco dei dadi</h2>
+            <p class="mx-5">
+                Per giocare basterà cliccare sul tasto gioca, verranno generati due numeri random, il più altro vince.
+            </p>
+            <div class="d-flex">
+                <div class="col-6 text-center">
+                    <h4>Numero Utente</h4>
+                    <span id="usernumber" class="d-block mb-2"> - </span>
+                </div>
+                <div class="col-6 text-center">
+                    <h4>Numero Computer</h4>
+                    <span id="computernumber" class="d-block mb-2"> - </span>
+                </div>
+            </div>
+            <button type="button" id="play" class="btn btn-dark d-inline mx-auto my-3">Gioca</button>
         </div>
     </div>
 

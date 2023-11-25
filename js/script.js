@@ -38,7 +38,11 @@ document.getElementById('login').addEventListener('click', function(){
 
     // controllo la variabile se true faccio accedere l'utente altrimenti no
     if(controlAccess === true) {
-        alert(`Benvenuto ${userMail}`)
+
+        document.getElementById('sectionLogin').classList.add('d-none');
+        document.getElementById('sectionPlay').classList.remove('d-none');
+        document.getElementById('nameUser').innerHTML = userMail;
+
     } else{
         alert('Prima di accedere al sito devi registrarti')
     }
@@ -46,8 +50,22 @@ document.getElementById('login').addEventListener('click', function(){
 
 })
 
+document.getElementById('play').addEventListener('click', function(){
 
+    const userNumber = Math.round(Math.random()*5)+1;
+    document.getElementById('usernumber').innerHTML = userNumber;
+    console.log(userNumber);
 
+    const computerNumber = Math.round(Math.random()*5)+1;
+    document.getElementById('computernumber').innerHTML = computerNumber;
+    console.log(computerNumber);
 
+    if(userNumber > computerNumber){
+        alert(`Complienti ${userMail} hai vinto`);
+    } else if(userNumber < computerNumber){
+        alert(`Mi dispiace ${userMail} hai perso`);
+    }else{
+        alert('La partita è finita in parità')
+    }
 
-// scorro la lista per controllare se c'è la mail
+})
