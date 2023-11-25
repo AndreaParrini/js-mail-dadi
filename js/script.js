@@ -110,6 +110,14 @@ document.getElementById('adduser').addEventListener('click', function(){
 
 })
 
+document.getElementById('annullaregistrazione').addEventListener('click', function(){
+
+    document.getElementById('sectionRegistration').classList.add('d-none');
+    document.getElementById('sectionLogin').classList.remove('d-none');
+    document.getElementById('usermail').value = "";
+
+})
+
 document.getElementById('play').addEventListener('click', function () {
 
     const userNumber = Math.round(Math.random() * 5) + 1;
@@ -121,11 +129,20 @@ document.getElementById('play').addEventListener('click', function () {
     console.log(computerNumber);
 
     if (userNumber > computerNumber) {
-        alert(`Complienti ${userMail} hai vinto`);
+
+        document.getElementById('sectionResult').classList.remove('d-none');
+        document.getElementById('result').innerHTML = `Complienti ${userMail} hai vinto`;
+
     } else if (userNumber < computerNumber) {
-        alert(`Mi dispiace ${userMail} hai perso`);
+
+        document.getElementById('sectionResult').classList.remove('d-none');
+        document.getElementById('result').innerHTML = `Mi dispiace ${userMail} hai perso`;
+        
     } else {
-        alert('La partita è finita in parità')
+
+        document.getElementById('sectionResult').classList.remove('d-none');
+        document.getElementById('result').innerHTML = `La partità è finita in parità`;
+
     }
 
 })
