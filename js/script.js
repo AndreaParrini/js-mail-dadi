@@ -146,3 +146,12 @@ document.getElementById('play').addEventListener('click', function () {
     }
 
 })
+
+document.getElementById('logout').addEventListener('click', function(){
+
+    document.getElementById('sectionPlay').classList.add('d-none');
+    document.getElementById('sectionResult').classList.add('d-none');
+    document.getElementById('sectionLogin').classList.remove('d-none');
+    document.getElementById('usermail').value = "";
+    
+})
